@@ -1,0 +1,92 @@
+/* 
+
+Color theme:
+https://www.schemecolor.com/modern-x-ray-color-palette.php
+
+*/
+
+
+body {
+    background-color: #293135;
+    color: #C8DDE7;
+    font-family: "Verdana";
+    /*padding-left: 16px;
+    padding-right: 16px;*/
+    margin: 0;
+    line-height: 1.5em;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#navbar {
+    background-color: #394346;
+    color: #C8DDE7;
+    margin: 0px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+}
+
+#navbar ul{
+    padding: 0;
+    list-style:none;
+}
+
+#navbar li{
+    display: inline;
+}
+
+#navbar a{
+    color:#C8DDE7;
+    text-decoration:none;
+    font-size: 18px;
+}
+
+#form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+    width: auto;
+    text-align: center;
+}
+
+#iKnown li{
+    list-style: none;
+    display: inline;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+#planetInput {
+    display: none;
+}
+
+#gravityInput {
+    display: none;
+}
+
+.btn {
+    margin-top: 1em;
+    background-color: #C8DDE7;
+    border-color: #A8D3E3;
+    height: 3em;
+    width: 10em;
+    color:  #293135;
+    font-size: 18px;
+    padding-top: 1px;
+}
+
+#planetInput ,#gravityInput, #distanceInput, #bendInput {
+    padding-top: 1em;
+}
+
+.ans{
+    margin-top: 1em;
+}
+
+#error{
+    display:none;
+}
