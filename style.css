@@ -90,3 +90,7 @@ body {
 #error{
     display:none;
 }
+
+img{
+    width:auto;
+}
