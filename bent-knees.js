@@ -13,6 +13,7 @@ const ans = document.querySelector('.ans');
 const joinCompression = .500;
 var answer = "";
 const error = document.querySelector('#error');
+const negative_value = document.querySelector('#negative-input');
 
 const bend = document.querySelector('#bend');
 
@@ -40,6 +41,7 @@ form.addEventListener('click', onClick);
 
 function onSubmit(e){
     e.preventDefault();
+    f = 0;
     let planetInput = planet.value.toLowerCase().trim(); //turns input into all lowercase (to match dictionary) and strips string
     //console.log(planetInput);
 //console.log(iPlanet.value)
@@ -67,13 +69,23 @@ function onSubmit(e){
                 ans.style.display = 'block';
                 iBreak.style.display = 'block';
                 document.querySelector('#error').style.display = 'none';
+                negative_value.style.display = 'none';
                 iBreak.innerHTML = 'Knee is broken! Ouch!';
                 console.log('broke');
-                console.log(f);
+                //console.log(f);
+                console.log('planet Input = ' + planetInput);
+                console.log('gravity input = ' + gravity.value);
             }
             else if(typeof f != 'number' || Number.isNaN(f) == true){
                 //alert('Uh oh mark 2.5');
                 document.querySelector('#error').style.display = 'block';
+                negative_value.style.display = 'none';
+                ans.style.display = 'none';
+                iBreak.style.display = 'none';
+            }
+            else if(f < 0){
+                document.querySelector('#error').style.display = 'none';
+                negative_value.style.display = 'block';
                 ans.style.display = 'none';
                 iBreak.style.display = 'none';
             }
@@ -81,9 +93,12 @@ function onSubmit(e){
                 ans.style.display = 'block';
                 iBreak.style.display = 'block';
                 document.querySelector('#error').style.display = 'none';
+                negative_value.style.display = 'none';
                 iBreak.innerHTML = 'Knee is not broken! Whew!';
                 console.log('no break');
-                console.log(f);
+                //console.log(f);
+                console.log('planet Input = ' + planetInput);
+                console.log('gravity input = ' + gravity.value);
             }
 
         }
@@ -96,12 +111,22 @@ function onSubmit(e){
                 ans.style.display = 'block';
                 iBreak.style.display = 'block';
                 document.querySelector('#error').style.display = 'none';
+                negative_value.style.display = 'none';
                 iBreak.innerHTML = 'Knee is broken! Ouch!';
                 console.log('broke');
             }
             else if(typeof f != 'number' || Number.isNaN(f) == true){
                 //alert('Uh oh mark 2.5');
                 document.querySelector('#error').style.display = 'block';
+                negative_value.style.display = 'none';
+                ans.style.display = 'none';
+                iBreak.style.display = 'none';
+                console.log('planet Input = ' + planetInput);
+                console.log('gravity input = ' + gravity.value);
+            }
+            else if(f < 0){
+                document.querySelector('#error').style.display = 'none';
+                negative_value.style.display = 'block';
                 ans.style.display = 'none';
                 iBreak.style.display = 'none';
             }
@@ -109,8 +134,11 @@ function onSubmit(e){
                 ans.style.display = 'block';
                 iBreak.style.display = 'block';
                 document.querySelector('#error').style.display = 'none';
+                negative_value.style.display = 'none';
                 iBreak.innerHTML = 'Knee is not broken! Whew!'
                 console.log('no break');
+                console.log('planet Input = ' + planetInput);
+                console.log('gravity input = ' + gravity.value);
             }
         }
         else{
@@ -124,11 +152,13 @@ function onClick(){
     if(planetButton.checked){
         document.getElementById('planetInput').style.display = 'block';
         document.getElementById('gravityInput').style.display = 'none';
+        gravity.value = '';
         //console.log('Clicked yes!')
     }
     else if(gravityButton.checked){
         document.getElementById('planetInput').style.display = 'none';
         document.getElementById('gravityInput').style.display = 'block';
+        planet.value = '';
         //console.log('Clicked no!')
     }
 }

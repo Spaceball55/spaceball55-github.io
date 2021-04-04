@@ -10,6 +10,7 @@ let iBroken = false;
 const ans = document.querySelector('.ans');
 const joinCompression = .500;
 var answer = "";
+const negative_value = document.querySelector('#negative-input');
 
 const planetButton = document.getElementById('planetButton');
 const gravityButton = document.getElementById('gravityButton');
@@ -73,6 +74,12 @@ function onSubmit(e){
                 ans.style.display = 'none';
                 iBreak.style.display = 'none';
             }
+            else if(f < 0){
+                document.querySelector('#error').style.display = 'none';
+                negative_value.style.display = 'block';
+                ans.style.display = 'none';
+                iBreak.style.display = 'none';
+            }
             else{
                 ans.style.display = 'block';
                 iBreak.style.display = 'block';
@@ -100,6 +107,12 @@ function onSubmit(e){
                 ans.style.display = 'none';
                 iBreak.style.display = 'none';
             }
+            else if(f < 0){
+                document.querySelector('#error').style.display = 'none';
+                negative_value.style.display = 'block';
+                ans.style.display = 'none';
+                iBreak.style.display = 'none';
+            }
             else{
                 ans.style.display = 'block';
                 iBreak.style.display = 'block';
@@ -119,11 +132,13 @@ function onClick(){
     if(planetButton.checked){
         document.getElementById('planetInput').style.display = 'block';
         document.getElementById('gravityInput').style.display = 'none';
+        gravity.value = '';
         //console.log('Clicked yes!')
     }
     else if(gravityButton.checked){
         document.getElementById('planetInput').style.display = 'none';
         document.getElementById('gravityInput').style.display = 'block';
+        planet.value = '';
         //console.log('Clicked no!')
     }
 }

@@ -27,13 +27,20 @@
             <h2>DISCLAIMER: do NOT try the following experiment at home. It can and will hurt.</h2>
             <p>Ever wondered how much force your knees will take if you fall stiff-legged from a table? What about the Empire State Building? What if it was the Empire State Building on Mars?</p>
 
-            <p>Well, if you have, you’re in luck! This calculator will tell you exactly how much force will be acting against your knee, and whether or not your knee shatters. You never know when you’ll k-need the information!</p>
+            <p>Well, if you have, you’re in luck! This calculator will tell you exactly how much force will be acting against your knee, and whether or not your knee shatters. You never know when you will k-need the information!</p>
             
             <p>For those curious about the physics behind the situation, here is a quick explanation. </p>
             
             <p>The situation is exploring potential energy, kinetic energy, and work. A person falling starts with only potential energy, and as they fall, their potential energy is transferred to kinetic energy. The floor does work on the person when they hit the ground, thus reducing the kinetic energy to 0.
             </p>
-            <p>For the "known planets", I included all 9 (Pluto will remain a planet in my heart), and the moon for ease of access.</p>
+            
+            <p>The equation used is as follows: (credit to Openstax)</p>
+
+            <img src = 'images/Openstax Formula.JPG' alt = 'F = mgh/5*10^-3'>
+
+            <p>where F is force in N, m is mass in kg, g is acceleration of gravity in m/s^2, and h is height in m.</p>
+            
+            <p>Please use only positive values! Otherwise, you will end up with an impossible situation. For the "known planets", I included all 9 (Pluto will remain a planet in my heart), and the moon for ease of access.</p>
         </div>
         <form id = 'form'>
             <h1>Enter the needed values</h1>
@@ -71,6 +78,7 @@
             <div class = 'iBreak'></div>
             <br>
             <div id = 'error'> <h3>Sorry! There was an error in calculating the force. Please try again, and check the values you entered and that all fields have values.</h3></div>
+            <div id = 'negative-input'><h3>Uh oh! It looks like one of the values is negative, please check the numbers.</h3></div>
         </form>
     </div>
     <br><br><br><br><br><br><br><br>

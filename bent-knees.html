@@ -26,7 +26,7 @@
             <h2>DISCLAIMER: do NOT try the following experiment at home. It can and will hurt.</h2>
             <p>Ever wondered how fall you could fall and keep your knees intact? Could you fall from a table? From the roof of your house? From the tip of the Seattle Space Needle? What about the tip of the Seattle Space Needle on the moon?</p>
 
-            <p>Well, if you have, you’re in luck! This calculator will tell you exactly how much force will be acting against your knee, and whether or not your knee shatters. You never know when you’ll k-need the information!</p>
+            <p>Well, if you have, you’re in luck! This calculator will tell you exactly how much force will be acting against your knee, and whether or not your knee shatters. You never know when you will k-need the information!</p>
             
             <p>For those curious about the physics behind the situation, here is a quick explanation. </p>
             
@@ -37,9 +37,9 @@
 
             <img src = 'images/MIT Force Formula.JPG' alt = 'F = mg(h/Δh + 1)' >
 
-            <p>where F is force, m is mass, g is force of gravity, h is the distance fallen, and Δh is the knee compression.</p>
+            <p>where F is force in N, m is mass in kg, g is force of gravity in m/s^2, h is the distance fallen in m, and Δh is the knee bending in cm.</p>
 
-            <p>For the "known planets", I included all 9 (Pluto will remain a planet in my heart), and the moon for ease of access.</p>
+            <p>Please use only positive values! Otherwise, you will end up with an impossible situation. For the "known planets", I included all 9 (Pluto will remain a planet in my heart), and the moon for ease of access.</p>
         </div>
         <form id = 'form'>
             <h1>Enter the needed values</h1>
@@ -81,6 +81,7 @@
             <div class = 'iBreak'></div>
             <br>
             <div id = 'error'> <h3>Sorry! There was an error in calculating the force. Please try again, and check the values you entered and that all fields have values.</h3></div>
+            <div id = 'negative-input'><h3>Uh oh! It looks like one of the values is negative, please check the numbers.</h3></div>
         </form>
     </div>
     <br><br><br><br><br><br>
